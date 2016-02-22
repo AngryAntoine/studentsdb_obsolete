@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <title>Журнал відвідувань</title>
+    <meta name="description"
+          value="Система Обліку Студентів Навчального Закладу">
+    <!-- Include Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!--<style type="text/css">.col-xs-12, .col-xs-4, .col-xs-8 </style>-->
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!-- Start Container -->
+    <div class="container">
+      <!-- Start Header -->
+      <div class="row" id="header">
+        <!-- Logo -->
+        <div class="col-xs-8">
+          <h1>Сервіс обліку студентів</h1>
+        </div>
+        <!-- Groups Selector -->
+        <div class="col-xs-4" id="group-selector">
+          <strong>Група:</strong>
+          <label>
+            <select>
+              <option value="">Усі Студенти</option>
+              <option value="">ЕС - 31, Граменко Антон (No 6)</option>
+              <option value="">ЕС - 31, Граменко Дмитро (No 7)</option>
+              <option value="">ЕС - 32, Холодняк Наталія (No 21)</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <!-- End Header -->
+      <!-- Start SubHeader -->
+      <div class="row" id="sub-header">
+        <div class="col-xs-12">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation">
+              <a href="index.html">Студенти</a>
+            </li>
+            <li role="presentation">
+              <a href="visiting.html">Відвідування</a>
+            </li>
+            <li role="presentation" class="active">
+              <a href="group.html">Групи</a>
+            </li>
+            <li>
+              <a class="btn btn-primary" href="#">Додати групу</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- End SubHeader -->
+      <!-- Start Main Page Content -->
+      <!--Visiting calendar start-->
+      <h2>Групи</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+          <th>№</th>
+        </tr>
+      </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Антон Граменко</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Дмитро Граменко</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      <!--Visiting calendar end-->
+      <!-- End Main Page Content -->
+      <!-- Start Footer -->
+      <div class="row" id="footer">
+        <div class="col-xs-12">
+        &copy; 2014 Сервіс Обліку Студентів
+        </div>
+      </div>
+      <!-- End Footer -->
+    </div>
+    <!-- End Container -->
+
+  <!-- Javascripts Section -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
