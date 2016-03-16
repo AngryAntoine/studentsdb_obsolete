@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <title>Журнал відвідувань</title>
+    <meta name="description"
+          value="Система Обліку Студентів Навчального Закладу">
+    <!-- Include Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!--<style type="text/css">.col-xs-12, .col-xs-4, .col-xs-8 </style>-->
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!-- Start Container -->
+    <div class="container">
+      <!-- Start Header -->
+      <div class="row" id="header">
+        <!-- Logo -->
+        <div class="col-xs-8">
+          <h1 title="На головну"><a style="color: black;" href="index.html">Сервіс обліку студентів</a></h1>
+        </div>
+        <!-- Groups Selector -->
+        <div class="col-xs-4" id="group-selector">
+          <strong>Група:</strong>
+          <label>
+            <select>
+              <option value="">Усі Студенти</option>
+              <option value="">ЕС - 31, Граменко Антон (No 6)</option>
+              <option value="">ЕС - 31, Граменко Дмитро (No 7)</option>
+              <option value="">ЕС - 32, Холодняк Наталія (No 21)</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <!-- End Header -->
+      <!-- Start SubHeader -->
+      <div class="row" id="sub-header">
+        <div class="col-xs-12">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation">
+              <a href="index.html">Студенти</a>
+            </li>
+            <li role="presentation" class="active">
+              <a href="visiting.html">Відвідування</a>
+            </li>
+            <li role="presentation">
+              <a href="group.html">Групи</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- End SubHeader -->
+      <!-- Start Main Page Content -->
+      <!--Visiting calendar start-->
+      <h2>Облік відвідування</h2>
+    <nav class="month_selection" id="month">
+      <ul class="pagination">
+        <li><a href="#">&larr;</a></li>
+        <li class="active"><a href="#">Вересень</a></li>
+        <li><a href="#">&rarr;</a></li>
+      </ul>
+    </nav>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th>№</th>
+          <th>Студент</th>
+          <th>Чт 1</th>
+          <th>Пт 2</th>
+          <th>Сб 3</th>
+          <th>Нд 4</th>
+          <th>Пн 5</th>
+          <th>Вт 6</th>
+          <th>Ср 7</th>
+          <th>Чт 8</th>
+          <th>Пт 9</th>
+          <th>Сб 10</th>
+          <th>Нд 11</th>
+          <th>Пн 12</th>
+          <th>Вт 13</th>
+          <th>Ср 14</th>
+          <th>Чт 15</th>
+          <th>Пт 16</th>
+          <th>Сб 17</th>
+          <th>Нд 18</th>
+          <th>Пн 19</th>
+          <th>Вт 20</th>
+          <th>Ср 21</th>
+          <th>Чт 22</th>
+          <th>Пт 23</th>
+          <th>Сб 24</th>
+          <th>Нд 25</th>
+          <th>Пн 26</th>
+          <th>Вт 27</th>
+          <th>Ср 28</th>
+          <th>Чт 29</th>
+          <th>Пт 30</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Антон Граменко</td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Дмитро Граменко</td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Наталія Холодняк</td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+          <td style="vertical-align: middle;"><input type="checkbox"></td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+      <!--Visiting calendar end-->
+      <!-- End Main Page Content -->
+      <!-- Start Footer -->
+      <div class="row" id="footer">
+        <div class="col-xs-12">
+        &copy; 2014 Сервіс Обліку Студентів
+        </div>
+      </div>
+      <!-- End Footer -->
+    </div>
+    <!-- End Container -->
+
+  <!-- Javascripts Section -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

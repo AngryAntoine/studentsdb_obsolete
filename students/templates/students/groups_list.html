@@ -1,0 +1,82 @@
+{% extends "students/base.html" %}
+
+{% load static from staticfiles %}
+
+{% block meta_title %}Групи{% endblock meta_title %}
+
+{% block title %}Групи{% endblock title %}
+
+{% block content %}
+<div class="container">	
+<a class="btn btn-primary" id="button" href="{% url "groups_add" %}" title="Не сци, жми сміло!">Додати групу</a>
+
+<div class="table-responsive">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Назва</th>
+            <th>Староста</th>
+            <th>Дії</th>
+          </tr>
+        </thead>
+        <tbody>
+		  {% for group in groups %}        
+		  <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ group.group_name }}</td>
+            <td>{{ group.leader }}</td>
+            <td>
+		        <div class="dropdown">
+		          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+		            Дія
+		            <span class="caret"></span>
+		          </button>
+				      <ul class="dropdown-menu" role="menu">
+				        <li role="presentation">
+				          <a role="menuitem" tabindex="-1" href="/journal/{{ student.id }}">Відвідування</a>
+				        </li>
+				        <li role="presentation">
+				          <a role="menuitem" tabindex="-1" href="{% url "groups_edit" group.id %}">Редагувати</a>
+				        </li>
+				        <li role="presentation">
+				          <a role="menuitem" tabindex="-1" href="{% url "groups_delete" group.id %}">Видалити</a>
+				        </li>
+				      </ul>
+		          </div>
+              </td>
+          </tr>
+		  {% endfor %}
+		</tbody>
+      </table>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+</div>
+      <!--Visiting calendar end-->
+      <!-- End Main Page Content -->
+      <!-- Page navigation bar-->
+      <nav class="page_selection" id="page">
+        <ul class="pagination">
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">Далі</a></li>
+        </ul>
+      </nav>
+    <!-- End Students Listing -->
+      <nav>
+        <ul class="pagination">
+          <li><a href="#">&laquo;</a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </nav>
+      <!-- End Main Page Content -->
+{% endblock content %}
