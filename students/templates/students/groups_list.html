@@ -49,34 +49,11 @@
 		  {% endfor %}
 		</tbody>
       </table>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
     </div>
-</div>
       <!--Visiting calendar end-->
       <!-- End Main Page Content -->
-      <!-- Page navigation bar-->
-      <nav class="page_selection" id="page">
-        <ul class="pagination">
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">Далі</a></li>
-        </ul>
-      </nav>
     <!-- End Students Listing -->
-      <nav>
-        <ul class="pagination">
-          <li><a href="#">&laquo;</a></li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">&raquo;</a></li>
-        </ul>
-      </nav>
+      {% include "students/pagination.html" %}
+	</div>
       <!-- End Main Page Content -->
 {% endblock content %}
