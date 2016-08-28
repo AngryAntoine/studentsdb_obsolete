@@ -13,39 +13,49 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, url
 from django.contrib import admin
+from students.views import students_views
+from .settings import MEDIA_ROOT, DEBUG
 
-urlpatterns = patterns ('',
-	#students urls
-	url(r'^$', 'students.views.students_views.students_list', name='home'),
-	#students_add
-	url(r'^students/add/$', 'students.views.students_views.students_add', name='students_add'),	
-	#students_edit
-	url(r'^students/(?P<sid>\d+)/edit/$',
-		 'students.views.students_views.students_edit',
-		 name='students_edit'),
-	#students_delete
-	url(r'^students/(?P<sid>\d+)/delete/$',
-		 'students.views.students_views.students_delete',
-		 name='students_delete'),
+urlpatterns = [
+                       # students urls
+                       url(r'^$', students_views.students_list, name='home'),
+                       # students_add
+                       url(r'^students/add/$', students_views.students_add,
+                           name='students_add'),
+                       # students_edit
+                       url(r'^students/(?P<sid>\d+)/edit/$',
+                           students_views.students_edit,
+                           name='students_edit'),
+                       # students_delete
+                       url(r'^students/(?P<sid>\d+)/delete/$',
+                           students_views.students_delete,
+                           name='students_delete'),
 
-	#groups urls
-	url(r'^groups/$', 'students.views.groups_views.groups_list', name='groups'),
-	#groups_add
-	url(r'^groups/add/$', 'students.views.groups_views.groups_add', name='groups_add'),	
-	#groups_edit
-	url(r'^groups/(?P<gid>\d+)/edit/$',
-		 'students.views.groups_views.groups_edit',
-		 name='groups_edit'),
-	#groups_delete
-	url(r'^groups/(?P<gid>\d+)/delete/$',
-		 'students.views.groups_views.groups_delete',
-		 name='groups_delete'),
+                       # groups urls
+                       url(r'^groups/$', 'students.views.groups_views.groups_list', name='groups'),
+                       # groups_add
+                       url(r'^groups/add/$', 'students.views.groups_views.groups_add', name='groups_add'),
+                       # groups_edit
+                       url(r'^groups/(?P<gid>\d+)/edit/$',
+                           'students.views.groups_views.groups_edit',
+                           name='groups_edit'),
+                       # groups_delete
+                       url(r'^groups/(?P<gid>\d+)/delete/$',
+                           'students.views.groups_views.groups_delete',
+                           name='groups_delete'),
 
-	#journal	
-	url(r'^journal/$', 'students.views.journal_views.journal', name='journal'),
+                       # journal
+                       url(r'^journal/$', 'students.views.journal_views.journal', name='journal'),
 
-	#admin page
-    url(r'^admin/', admin.site.urls),
-)
+                       # admin page
+                       url(r'^admin/', admin.site.urls),
+                       ]
+
+
+if DEBUG:
+    # serve files from media folder
+    urlpatterns += patterns('',
+                            url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
+                                {'document_root': MEDIA_ROOT}))
