@@ -13,9 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import patterns, url
+from django.conf import settings
+from django.conf.urls import url
+from django.conf.urls.static import static
 from django.contrib import admin
-from students.views import students_views
+from students.views import (students_views,
+                            groups_views,
+                            journal_views,
+                            )
 from .settings import MEDIA_ROOT, DEBUG
 
 urlpatterns = [
@@ -34,28 +39,33 @@ urlpatterns = [
                            name='students_delete'),
 
                        # groups urls
-                       url(r'^groups/$', 'students.views.groups_views.groups_list', name='groups'),
+                       url(r'^groups/$', groups_views.groups_list, name='groups'),
                        # groups_add
-                       url(r'^groups/add/$', 'students.views.groups_views.groups_add', name='groups_add'),
+                       url(r'^groups/add/$', groups_views.groups_add, name='groups_add'),
                        # groups_edit
                        url(r'^groups/(?P<gid>\d+)/edit/$',
-                           'students.views.groups_views.groups_edit',
+                           groups_views.groups_edit,
                            name='groups_edit'),
                        # groups_delete
                        url(r'^groups/(?P<gid>\d+)/delete/$',
-                           'students.views.groups_views.groups_delete',
+                           groups_views.groups_delete,
                            name='groups_delete'),
 
                        # journal
-                       url(r'^journal/$', 'students.views.journal_views.journal', name='journal'),
+                       url(r'^journal/$', journal_views.journal, name='journal'),
 
                        # admin page
                        url(r'^admin/', admin.site.urls),
                        ]
 
+#
+# if DEBUG:
+#     # serve files from media folder
+#     urlpatterns += patterns('',
+#                             url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
+#                                 {'document_root': MEDIA_ROOT}))
 
-if DEBUG:
-    # serve files from media folder
-    urlpatterns += patterns('',
-                            url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
-                                {'document_root': MEDIA_ROOT}))
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

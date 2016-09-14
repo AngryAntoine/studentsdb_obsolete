@@ -1,5 +1,4 @@
 # -*- coding: UTF-8 -*-
-# Create your views here.
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render
 from django.http import HttpResponse

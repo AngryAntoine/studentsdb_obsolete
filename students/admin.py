@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
+
 from django.contrib import admin
 
-from .models import Student
+from .models import Student, Group
 
 
 class AdminStudent(admin.ModelAdmin):
@@ -19,3 +21,9 @@ class AdminStudent(admin.ModelAdmin):
     # ]
 
 admin.site.register(Student)
+
+
+class AdminGroup(admin.ModelAdmin):
+    pass
+
+admin.site.register(Group)
