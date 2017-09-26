@@ -85,9 +85,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': 'localhost',
-        'USER': 'students_db_user',
-        'PASSWORD': 'Jaaskelainen1986',
-        'NAME': 'students_db',
+        'USER': '***************',
+        'PASSWORD': '***********************',
+        'NAME': '**************',
         }
 }
 
